@@ -34,6 +34,8 @@ type Alert struct {
 	StartsAt     time.Time `json:"startsAt,omitempty"`
 	EndsAt       time.Time `json:"endsAt,omitempty"`
 	GeneratorURL string    `json:"generatorURL,omitempty"`
+	// The expression that triggered this alert.
+	Expression   string    `json:"expression,omitempty"`
 }
 
 // Name returns the name of the alert. It is equivalent to the "alertname" label.

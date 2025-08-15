@@ -448,6 +448,7 @@ func SendAlerts(s Sender, externalURL string) NotifyFunc {
 				Labels:       alert.Labels,
 				Annotations:  alert.Annotations,
 				GeneratorURL: externalURL + strutil.TableLinkForExpression(expr),
+				Expression:   expr,
 			}
 			if !alert.ResolvedAt.IsZero() {
 				a.EndsAt = alert.ResolvedAt
