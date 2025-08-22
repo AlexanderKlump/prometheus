@@ -31,6 +31,7 @@ func alertsToOpenAPIAlerts(alerts []*Alert) models.PostableAlerts {
 			StartsAt:    start,
 			Alert: models.Alert{
 				GeneratorURL: strfmt.URI(a.GeneratorURL),
+				Expression:   a.Expression,
 				Labels:       labelsToOpenAPILabelSet(a.Labels),
 			},
 		})
